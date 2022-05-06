@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: jackwire-redis
+  labels:
+    purpose: jackwire-redis
+    app: jackwire-redis
+spec:
+  containers:
+    - name: jackwire-redis
+      image: redis
+      imagePullPolicy: IfNotPresent
+      ports:
+        - containerPort: 6379
