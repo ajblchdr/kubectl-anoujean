@@ -2,7 +2,7 @@
 
 ***ALIAS : jackwire***
 
-# Creation du pod redis #
+# Création du pod redis #
 1/ récupération de l'image
 ```
 image: redis
@@ -14,7 +14,7 @@ ports:
     - containerPort: 6379
 ```
 
-# Creation du service du pod de redis #
+# Création du service du pod de redis #
 Garder le même nom que le pod ainsi que le port (6379)
 ```
 app: jackwire-redis
@@ -24,7 +24,7 @@ ports:
       targetPort: 6379
 ```
 
-# Creation du pod du serveur node #
+# Création du pod du serveur node #
 1/ récupération de l'image 
 
 ```
@@ -43,7 +43,7 @@ imagePullSecrets:
 jackwire-redis              LoadBalancer   10.3.27.122    <pending>         6379:32749/TCP   7s
 ```
 
-# les commandes pour créer, supprimmer et appliquer les modifications des pods et du service #
+# Les commandes pour créer, supprimmer et appliquer les modifications des pods et du service #
 
 ```
 kubectl create -f pod-redis-anoujean.yaml
